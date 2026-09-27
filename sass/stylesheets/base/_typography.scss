@@ -1,0 +1,20 @@
+@use '../abstracts' as vp;
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color:vp.$black;
+  font-family: vp.$font-primary;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.6rem;
+  -webkit-font-smoothing: antialiased; 
+  
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: vp.$font-title;
+  font-weight: 900;
+  color: vp.$black;
+  text-transform: uppercase;
+}

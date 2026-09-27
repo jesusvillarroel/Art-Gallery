@@ -1,0 +1,15 @@
+@use '../abstracts';
+
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+.container {
+   /* 1 */
+  margin-left: auto; /* 2 */
+  margin-right: auto; /* 2 */
+  padding-left: 1.6rem; /* 3 */
+  padding-right: 1.6rem; /* 3 */
+  width: 100%; /* 1 */
+  max-width: 100%;
+}
+

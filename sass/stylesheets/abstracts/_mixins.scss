@@ -1,0 +1,76 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// Mixin dinámico que lee tu mapa de breakpoints (Enfoque Mobile-First)
+@mixin responder-a($breakpoint) {
+  // Comprobamos si la clave existe en tu mapa
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Obtenemos el valor numérico (ej. 768px) de la clave (ej. 'medium')
+    $valor: map-get($breakpoints, $breakpoint);
+    
+    @media (min-width: $valor) {
+      @content;
+    }
+  } @else {
+    @warn "Lo siento, pero el valor '#{$breakpoint}' no existe en tu mapa $breakpoints.";
+  }
+}
+
+@mixin reset-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin button($bg,$bg_flecha,$font){
+  display: inline-flex ;
+  
+  padding-left: 3.2rem;
+  background-color: $bg;
+  font-family:$font;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  color: #fff;
+  height: 7.2rem;
+  white-space: nowrap;//para mantener la palabra en una sola linea
+  justify-content: center;
+  align-items: center;
+  .btn__flecha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.6rem;
+    height: auto;
+    align-self: stretch;
+    background-color: $bg_flecha;
+    margin-left: 32px;
+   
+
+    &::after{
+    
+    content: "";
+    width: 0.8rem;
+    height: 24px;
+    background-image: url("/assets/icon_flecha.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  }
+  
+  //solo se aplique cuando el usuario solo tenga un mouse real
+  @media (hover: hover){
+    &:hover{
+      background-color: $bg_flecha;
+      .btn__flecha{
+        background-color:$bg;
+      }
+    }
+
+  }
+}

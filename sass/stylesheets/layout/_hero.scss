@@ -1,0 +1,31 @@
+@use '../abstracts' as vp;
+.hero{
+    width: 100%;
+    margin-bottom: 11.9rem;
+    .container{
+        h1{
+            font-family:vp.$font-title;
+            color: vp.$black;
+            line-height: 5rem;
+            font-size: 6rem;
+            font-weight: 900;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            margin-bottom: 26px;
+
+        }
+        p{
+            margin: 0;
+            color: vp.$gray;
+            line-height: 2.8rem;
+            max-width: 35ch;
+            margin-bottom: 2.9rem;
+        }
+        div{
+            ul{
+                @include vp.reset-list();
+            }
+        }
+    }    
+}

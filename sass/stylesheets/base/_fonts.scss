@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+// 1. Big Shoulders - Peso 800 (ExtraBold para el texto del  botón)
+@font-face {
+  font-family: 'Big Shoulders';
+  src: url('/assets/fonts/BigShoulders-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+// 2. Big Shoulders - Peso 900 (Black para  H1 y H2 )
+@font-face {
+  font-family: 'Big Shoulders';
+  src: url('/assets/fonts/BigShoulders-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+// 3. Outfit - Peso 300 (Light para los  párrafos )
+@font-face {
+  font-family: 'Outfit';
+  src: url('/assets/fonts/Outfit-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

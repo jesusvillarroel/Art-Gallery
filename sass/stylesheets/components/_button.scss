@@ -1,0 +1,7 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+@use '../abstracts' as vp;
+.btn{
+    @include vp.button(vp.$black,vp.$marron,vp.$font-title);
+}
