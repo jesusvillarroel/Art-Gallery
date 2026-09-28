@@ -1,3 +1,44 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+@use '../abstracts' as vp;
+.footer{
+    background-color: vp.$black;
+    width: 37.5rem;
+    margin: 0;
+    padding: 0;
+    .container{
+        padding: 4.8rem 3.2rem;
+        h2{
+            color: white;
+            font-size: 3rem;
+            line-height: 3rem;
+            margin-bottom: 3.8rem;
+        }
+        p{
+            color: white;
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            margin: 0;
+            max-width: 33rem;
+            margin-bottom: 3.8rem
+        }
+
+    }
+    &__social{
+        ul{
+            @include vp.reset-list();
+            justify-content: stretch;
+            gap: 2rem;
+            li{
+                a{
+                    img{
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+            }
+            
+        }
+    }
+}
