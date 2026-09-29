@@ -13,6 +13,7 @@
             padding: 0;
             width: 100%;
             margin-bottom: 26px;
+          
 
         }
         p{
@@ -25,6 +26,26 @@
         div{
             ul{
                 @include vp.reset-list();
+            }
+        }
+       //estilo para tablet
+        @include vp.responder-a('medium'){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            margin-top: -65rem;
+            height: 65rem;
+            
+
+            h1,p,div{
+                width: 45%;
+                max-width: 100%;
+                margin-left: auto;
+            }
+            h1{
+                font-size: 6.5rem;
+                line-height: 5.5rem;
             }
         }
     }    

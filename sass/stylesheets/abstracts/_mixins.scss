@@ -1,13 +1,14 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
-
+@use 'sass:map';
+@use "variables" as var;
 // Mixin dinámico que lee tu mapa de breakpoints (Enfoque Mobile-First)
 @mixin responder-a($breakpoint) {
   // Comprobamos si la clave existe en tu mapa
-  @if map-has-key($breakpoints, $breakpoint) {
+  @if map.has-key(var.$breakpoints, $breakpoint) {
     // Obtenemos el valor numérico (ej. 768px) de la clave (ej. 'medium')
-    $valor: map-get($breakpoints, $breakpoint);
+    $valor: map.get(var.$breakpoints, $breakpoint);
     
     @media (min-width: $valor) {
       @content;

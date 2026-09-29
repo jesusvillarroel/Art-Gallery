@@ -1,6 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+@use '../abstracts' as vp;
 header{
     
     width: 100%;
@@ -14,6 +15,11 @@ header{
         object-fit: cover;
         object-position: center 45%;
         transform-origin: center 45%;
+        @include vp.responder-a('medium'){
+            height: 65rem;
+            width: 60%;
+            object-position: center 50%;
+        }
    }
    
 }
