@@ -113,10 +113,88 @@
                    padding: 0 2.8rem 5.1rem 2.9rem ;
                 };
             }
+        }  
+            
+        @include vp.responder-a("large") {
+                // 1. Configuramos el contenedor con el ancho de tu Header
+                width: 111rem;
+                margin-left: auto;
+                margin-right: auto;
+                display: grid;
+                // 2. Redefinimos las columnas y filas oficiales para Desktop
+                grid-template-columns: 35rem 16rem 54rem; 
+                grid-template-rows: 40rem 31.3rem 39.7rem;
+                gap: 3.0rem; 
+    
+             .grid__text {
+                 // Mantiene la misma posición que tablet (Fila 1, Columna 1)
+                 grid-area: 1 / 1 / 2 / 2; 
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+
+                 h2 {
+                    br{
+                        display: none;
+                    }
+                     max-width: 35rem;
+                     width: 100%;
+                     font-size: 6.0rem;
+                     line-height: 5.6rem;
+                     padding-top: 0;
+                     margin-bottom: 3.2rem;
+                 }
+                 p {
+                     
+                    max-width: 28rem;
+                 }
+             }
+         
+            .grid__img-1 {
+                // Fila 1, abarca desde la columna 2 hasta la 4 (el espacio restante)
+                grid-area: 1 / 2 / 2 / 4;
+                height: 100%; // Deja que el grid-row (40rem) controle la altura
+            }
+    
+            .grid__img-2 {
+                // Fila 2 hasta la 4 (dos filas), abarca columnas 1 y 2
+                grid-area: 2 / 1 / 4 / 3;
+                height: 100%; // Deja que sume las filas 2 y 3 automáticamente (31.3 + 39.7 + gap = 74rem)
+            }
+    
+            .grid__img-3 {
+                // Fila 2, Columna 3
+                grid-area: 2 / 3 / 3 / 4;
+                height: 100%;
+            }
+        
+            .grid__black {
+                // Fila 3, Columna 3
+                grid-area: 3 / 3 / 4 / 4;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 6.5rem 4.7rem 6.4rem 4.8rem; 
+
+                h3 {
+                    font-size: 6.0rem;
+                    line-height: 6.0rem;
+                    padding:0; 
+                    margin-bottom: 3.2rem;
+                }
+                p {
+                    font-size: 2.2rem;
+                    line-height: 3.2rem;
+                    padding: 0 ;
+                    max-width: 40rem;
+                    letter-spacing: 0.1rem;
+                }
+            }
         }    
-
-
+    
     }
-
-}
-
+    
+}    
+    
+    
