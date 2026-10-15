@@ -59,7 +59,17 @@
            
 
         }
+         @include vp.responder-a("large"){
+           
+           width: 111rem;
+           padding: 0;
+           padding: 8rem 0;
+           p{
+            max-width: 40rem;
+           }
 
+         }
+        
     }
    
 }
