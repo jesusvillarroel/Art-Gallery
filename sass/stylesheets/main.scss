@@ -14,12 +14,14 @@
 @use 'layout/header';
 @use 'layout/hero';
 @use 'layout/galery';
+@use 'layout/location-info';
 
 // 4. Components
 @use 'components/button';
 
 // 5. Pages
 @use 'pages/home';
+@use 'pages/location';
 
 // 6. Themes
 @use 'themes/default';

@@ -1,0 +1,28 @@
+@use '../abstracts' as vp;
+
+.location-page {
+    width: 100%;
+    position: relative; // Obligatorio para que la navegación flote encima
+
+    // Contenedor del botón flotando sobre el mapa
+    .location-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20; // Asegura que esté por encima de la imagen del mapa
+        width: 100%;
+    }
+
+    // Contenedor de las imágenes del mapa exportadas de Figma
+    .location-map {
+        width: 100%;
+        height: 55rem; 
+
+        picture, img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // Hace que el mapa llene el contenedor sin deformarse
+            display: block;
+        }
+    }
+}

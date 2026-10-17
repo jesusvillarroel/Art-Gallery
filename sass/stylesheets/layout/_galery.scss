@@ -43,8 +43,8 @@
         .grid__black{
             order: 5;
             background-color: vp.$black;
-            width: 34.3rem;
-            height: 29.3rem;
+            width: 100%;
+            height: auto;
             h3{
                color: white;
                font-size: 5rem;
@@ -172,6 +172,8 @@
                 // Fila 3, Columna 3
                 grid-area: 3 / 3 / 4 / 4;
                 height: 100%;
+                width: 100%;
+                max-width: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;

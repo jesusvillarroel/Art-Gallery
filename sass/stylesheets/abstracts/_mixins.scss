@@ -28,7 +28,7 @@
 }
 @mixin button($bg,$bg_flecha,$font){
   display: inline-flex ;
-  
+  text-transform: uppercase;
   padding-left: 3.2rem;
   background-color: $bg;
   font-family:$font;

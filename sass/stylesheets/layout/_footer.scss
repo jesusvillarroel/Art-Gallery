@@ -71,5 +71,30 @@
          }
         
     }
-   
+   &--marron{
+    background-color: vp.$marron;
+    .container{
+        h2{
+            color: vp.$black;
+        }
+        p{
+            color: vp.$black;
+        }
+        .footer__social{
+            a{
+                img{
+                    //para volver los iconos con fondo negros
+                    filter: brightness(0) saturate(100%); 
+                    transition: filter 0.3s ease;
+                }
+            }
+            @media (hover: hover) {
+                    a:hover img {
+                        filter: brightness(0) saturate(100%) invert(100%);
+                    }
+            }
+        }
+    }
+    
+   }
 }

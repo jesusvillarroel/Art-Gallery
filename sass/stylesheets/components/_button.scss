@@ -1,7 +1,21 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
 @use '../abstracts' as vp;
-.btn{
-    @include vp.button(vp.$black,vp.$marron,vp.$font-title);
+
+.btn {
+    @include vp.button(vp.$black, vp.$marron, vp.$font-title);
+
+    &--back{
+        padding-left: 0;
+        padding-right: 3.2rem;
+        .btn__flecha{
+            margin-left: 0;
+            margin-right: 3.2rem;
+
+            &::after{
+                transform: rotate(180deg);//para voltear la flecha
+            }
+
+        }
+
+    }
+    
 }
