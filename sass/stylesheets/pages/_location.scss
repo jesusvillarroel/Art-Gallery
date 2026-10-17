@@ -11,6 +11,10 @@
         left: 0;
         z-index: 20; // Asegura que esté por encima de la imagen del mapa
         width: 100%;
+        //para tablet le damos una separacion por la izquierda
+        @include vp.responder-a('medium'){
+            padding-left: 3.8rem;
+        }
     }
 
     // Contenedor de las imágenes del mapa exportadas de Figma
@@ -23,6 +27,10 @@
             height: 100%;
             object-fit: cover; // Hace que el mapa llene el contenedor sin deformarse
             display: block;
+        }
+        //para tablet
+        @include vp.responder-a('medium'){
+            height: 60rem; 
         }
     }
 }
