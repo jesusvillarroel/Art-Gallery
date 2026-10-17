@@ -37,10 +37,25 @@
                         img{
                             width: 2rem;
                             height: 2rem;
+                            transition: transform 0.3s ease;
+                            // opacity: 0.6;
+                            // transition: opacity 0.3s ease;
                         }
                     }
+                    
                 }
-                
+                //ideal para fondo oscuro uso de opacity
+                //  @media (hover: hover) {
+                //     a:hover img {
+                //      opacity: 1; // Brillan al 100% al pasar el mouse
+                //     }
+                // }
+                @media (hover: hover) {
+                    a:hover img{
+                        transform: scale(1.15);
+                    }
+                    
+                }
             }
         }
         //footer para tablet
@@ -60,10 +75,14 @@
 
         }
          @include vp.responder-a("large"){
-           
+           display: grid;
+           grid-template-columns: 35rem 1fr auto;
+           align-items: flex-start;
            width: 111rem;
            padding: 0;
            padding: 8rem 0;
+           margin-left: auto;
+           margin-right: auto;
            p{
             max-width: 40rem;
            }

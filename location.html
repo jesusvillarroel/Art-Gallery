@@ -21,7 +21,9 @@
       <!-- 2. Contenedor para el mapa (usando la imagen oficial del reto) -->
      <section class="location-map">
         <picture>
-            <!-- Si la pantalla es de tablet o más grande (incluyendo laptop/desktop), usa esta -->
+            <!-- Si la pantalla es grande -->
+            <source media="(min-width: 1024px)" srcset="/assets/image-map-desktop.png" />
+            <!-- Si la pantalla es de tablet -->
             <source media="(min-width: 768px)" srcset="/assets/image-map-tablet.png" />
             <!-- Si es móvil, usa esta -->
             <img src="/assets/image-map-mobile.png" alt="Mapa de localización de la galería" />
